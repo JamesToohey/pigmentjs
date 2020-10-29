@@ -139,7 +139,6 @@ export {
     hsl2string,
     hsl2rgb,
     relativeLuminance,
-
     hsl2array,
     rgb2array,
 };

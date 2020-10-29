@@ -1,13 +1,13 @@
-type RGB = {
-    r: number,
-    g: number,
-    b: number,
+interface RGB {
+    readonly r: number,
+    readonly g: number,
+    readonly b: number,
 };
 
-type HSL = {
-    h: number,
-    s: number,
-    l: number,
+interface HSL {
+    readonly h: number,
+    readonly s: number,
+    readonly l: number,
 };
 
 type ValidatedHex = string;
