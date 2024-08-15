@@ -5,10 +5,12 @@ PigmentJS is a very, very simple zero-dependency colour library built for web de
 ### Quick Start
 
 #### Install
-`npm i --save pigmentjs`
 
+`npm i --save pigmentjs`
+`yarn add pigmentjs`
 
 #### Use Pigment
+
 Instantiate PigmentJS to generate a random colour, or use a 3 or 6 character Hex string.
 
 ```javascript
@@ -25,8 +27,9 @@ Pigment('#F3C');
 ```
 
 Create colours
+
 ```javascript
-const pigment = Pigment('#22FF09');
+const pigment = Pigment("#22FF09");
 const complementary = pigment.complementary().hex; // '#E609FF'
 const triad = pigment.triad(); // [Pigment(), Pigment(), Pigment()];
 ```
@@ -135,7 +138,7 @@ Params
 
 Size [Int] (required)
 
-- How many new colours to return
+-   How many new colours to return
 
 ```javascript
 const pigment = Pigment();
@@ -152,7 +155,7 @@ Params
 
 Size [Int] (required)
 
-- How many new colours to return
+-   How many new colours to return
 
 ```javascript
 const pigment = Pigment();
@@ -164,10 +167,13 @@ pigment.shades(3); // [Pigment(), Pigment(), Pigment()]
 ### Deploying
 
 1. Bump verion number
+
 ```
-npm version [major|minor|patch]
+yarn version [major|minor|patch]
 ```
+
 2. Build and publish
+
 ```
-npm publish
+yarn publish
 ```

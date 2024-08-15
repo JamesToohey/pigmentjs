@@ -1,8 +1,7 @@
-const {Pigment} = require('../dist/pigment.js');
+const {Pigment} = require("../dist/pigment.js");
 
-
-describe('loads', () => {
-    test('public methods', () => {
+describe("loads", () => {
+    test("public methods", () => {
         const pigment = Pigment();
 
         pigment.complementary();

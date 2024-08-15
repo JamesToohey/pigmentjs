@@ -1,0 +1,6 @@
+*.json
+*.html
+.cache
+.yarn
+node_modules
+dist

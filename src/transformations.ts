@@ -39,10 +39,10 @@ const rgb2hsl = (rgb: RGB): HSL => {
     const min = Math.min(r, g, b);
     const max = Math.max(r, g, b);
 
-    light = ((min + max) / 2);
+    light = (min + max) / 2;
 
     if (light < 1) {
-        sat = (max - min) / (1 - Math.abs((2 * light) - 1)) * 100;
+        sat = ((max - min) / (1 - Math.abs(2 * light - 1))) * 100;
     } else {
         sat = 0;
     }
@@ -58,7 +58,7 @@ const rgb2hsl = (rgb: RGB): HSL => {
             hue = (4.0 + (r - g) / (max - min)) * 60;
             break;
         default:
-            throw Error('Error processing rgb2hsl');
+            throw Error("Error processing rgb2hsl");
     }
 
     if (hue < 0) {
@@ -67,7 +67,7 @@ const rgb2hsl = (rgb: RGB): HSL => {
 
     hue = Math.round(hue * 10) / 10;
     sat = Math.round(sat * 10) / 10;
-    light = Math.round((light * 100) * 10) / 10;
+    light = Math.round(light * 100 * 10) / 10;
 
     return {
         h: hue || 0,
@@ -77,7 +77,7 @@ const rgb2hsl = (rgb: RGB): HSL => {
 };
 
 const hsl2rgb = (hsl: HSL): RGB => {
-    const hue = hsl.h
+    const hue = hsl.h;
     const sat = hsl.s / 100;
     const light = hsl.l / 100;
 
@@ -90,17 +90,29 @@ const hsl2rgb = (hsl: HSL): RGB => {
     let b = 0;
 
     if (0 <= hue && hue < 60) {
-        r = chroma; g = x; b = 0;
+        r = chroma;
+        g = x;
+        b = 0;
     } else if (60 <= hue && hue < 120) {
-        r = x; g = chroma; b = 0;
+        r = x;
+        g = chroma;
+        b = 0;
     } else if (120 <= hue && hue < 180) {
-        r = 0; g = chroma; b = x;
+        r = 0;
+        g = chroma;
+        b = x;
     } else if (180 <= hue && hue < 240) {
-        r = 0; g = x; b = chroma;
+        r = 0;
+        g = x;
+        b = chroma;
     } else if (240 <= hue && hue < 300) {
-        r = x; g = 0; b = chroma;
+        r = x;
+        g = 0;
+        b = chroma;
     } else if (300 <= hue && hue <= 360) {
-        r = chroma; g = 0; b = x;
+        r = chroma;
+        g = 0;
+        b = x;
     }
 
     return {
@@ -108,7 +120,7 @@ const hsl2rgb = (hsl: HSL): RGB => {
         g: Math.abs(Math.round((g + m) * 255)),
         b: Math.abs(Math.round((b + m) * 255)),
     };
-}
+};
 
 const hsl2string = (hsl: HSL): HSLString => {
     return `${hsl.h}, ${hsl.s}, ${hsl.l}`;
@@ -120,13 +132,21 @@ const relativeLuminance = (rgb: RGB): number => {
     const gsRGB = rgb.g / 255;
     const bsRGB = rgb.b / 255;
 
-    const r = rsRGB <= 0.03928 ? rsRGB * lowCoefficient : Math.pow((rsRGB + 0.055) / 1.055, 2.4);
-    const g = gsRGB <= 0.03928 ? gsRGB * lowCoefficient : Math.pow((gsRGB + 0.055) / 1.055, 2.4);
-    const b = bsRGB <= 0.03928 ? bsRGB * lowCoefficient : Math.pow((bsRGB + 0.055) / 1.055, 2.4);
+    const r =
+        rsRGB <= 0.03928
+            ? rsRGB * lowCoefficient
+            : Math.pow((rsRGB + 0.055) / 1.055, 2.4);
+    const g =
+        gsRGB <= 0.03928
+            ? gsRGB * lowCoefficient
+            : Math.pow((gsRGB + 0.055) / 1.055, 2.4);
+    const b =
+        bsRGB <= 0.03928
+            ? bsRGB * lowCoefficient
+            : Math.pow((bsRGB + 0.055) / 1.055, 2.4);
 
-    return (r * 0.2126) + (g * 0.7152) + (b * 0.0722);
+    return r * 0.2126 + g * 0.7152 + b * 0.0722;
 };
-
 
 const hsl2array = (hsl: HSL): [number, number, number] => [hsl.h, hsl.s, hsl.l];
 const rgb2array = (rgb: RGB): [number, number, number] => [rgb.r, rgb.g, rgb.b];

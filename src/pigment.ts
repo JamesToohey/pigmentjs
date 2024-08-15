@@ -1,17 +1,16 @@
-import {formatHex, validateHex} from './validations';
-import {randomHex} from './helpers';
+import {randomHex} from "./helpers";
 import {
     hex2rgb,
-    rgb2hex,
-    rgb2string,
-    rgb2hsl,
-    hsl2string,
-    hsl2rgb,
-    relativeLuminance,
-
-    rgb2array,
     hsl2array,
-} from './transformations';
+    hsl2rgb,
+    hsl2string,
+    relativeLuminance,
+    rgb2array,
+    rgb2hex,
+    rgb2hsl,
+    rgb2string,
+} from "./transformations";
+import {formatHex, validateHex} from "./validations";
 
 export class Pigment {
     readonly hex: string;
@@ -102,7 +101,11 @@ export class Pigment {
 
         return percentages.map((saturation) => {
             saturation = saturation * 100;
-            return new Pigment(rgb2hex(hsl2rgb({h: this.hue, s: saturation, l: this.lightness})));
+            return new Pigment(
+                rgb2hex(
+                    hsl2rgb({h: this.hue, s: saturation, l: this.lightness}),
+                ),
+            );
         });
     }
 
@@ -116,11 +119,13 @@ export class Pigment {
 
         return percentages.map((shade) => {
             const {r, g, b} = this.irgb;
-            return new Pigment(rgb2hex({
-                r: Math.round(r - (r * shade)),
-                g: Math.round(g - (g * shade)),
-                b: Math.round(b - (b * shade)),
-            }));
+            return new Pigment(
+                rgb2hex({
+                    r: Math.round(r - r * shade),
+                    g: Math.round(g - g * shade),
+                    b: Math.round(b - b * shade),
+                }),
+            );
         });
     }
 
@@ -131,7 +136,7 @@ export class Pigment {
      * @returns {String} either '#FFFFFF' or '#000000'
      */
     _textColourHex(relativeLuminance: number): string {
-        return (relativeLuminance < 0.5) ? '#FFFFFF' : '#000000';
+        return relativeLuminance < 0.5 ? "#FFFFFF" : "#000000";
     }
 }
 
