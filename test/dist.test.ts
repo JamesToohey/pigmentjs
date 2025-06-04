@@ -1,4 +1,4 @@
-const {Pigment} = require('../dist/pigment.js');
+const {Pigment} = require('../dist/index.js');
 
 
 describe('loads', () => {

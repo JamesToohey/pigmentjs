@@ -1,3 +1,5 @@
+import {RGB, HSL, ValidatedHex, RGBString, HSLString} from './types';
+
 const hex2rgb = (hex: ValidatedHex): RGB => {
     return {
         r: parseInt(hex.substring(1, 3), 16),

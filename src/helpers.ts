@@ -1,4 +1,5 @@
 import {validateHex} from './validations';
+import {ValidatedHex} from './types';
 
 const randomHex = (): ValidatedHex => {
     let r = Math.round(Math.random() * (255)).toString(16);
