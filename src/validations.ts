@@ -1,3 +1,5 @@
+import {ValidatedHex} from './types';
+
 const isValidHex = (hex: string): boolean => (/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/.test(hex));
 
 const validateHex = (hex: string): ValidatedHex => {

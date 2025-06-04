@@ -5,28 +5,41 @@ PigmentJS is a very, very simple zero-dependency colour library built for web de
 ### Quick Start
 
 #### Install
+
 `npm i --save pigmentjs`
 
-
 #### Use Pigment
+
 Instantiate PigmentJS to generate a random colour, or use a 3 or 6 character Hex string.
+
+**JavaScript:**
 
 ```javascript
 // Require
-const {Pigment} = require('pigmentjs');
+const { Pigment } = require("pigmentjs");
 // OR
 // Import
-import Pigment from 'pigmentjs'
-
+import Pigment from "pigmentjs";
 
 Pigment(); // Random colour
-Pigment('#FFFFFF');
-Pigment('#F3C');
+Pigment("#FFFFFF");
+Pigment("#F3C");
+```
+
+**TypeScript:**
+
+```typescript
+import Pigment from "pigmentjs";
+
+const pigment: Pigment = Pigment("#22FF09");
+const complementary: string = pigment.complementary().hex; // '#E609FF'
+const triad: [Pigment, Pigment, Pigment] = pigment.triad();
 ```
 
 Create colours
+
 ```javascript
-const pigment = Pigment('#22FF09');
+const pigment = Pigment("#22FF09");
 const complementary = pigment.complementary().hex; // '#E609FF'
 const triad = pigment.triad(); // [Pigment(), Pigment(), Pigment()];
 ```
@@ -41,6 +54,14 @@ const triad = pigment.triad(); // [Pigment(), Pigment(), Pigment()];
 
 ```javascript
 Pigment().rgb; // [239, 56, 230]
+```
+
+`Pigment().irgb`
+
+Returns RGB values as an object with `r`, `g`, `b` properties.
+
+```javascript
+Pigment().irgb; // {r: 239, g: 56, b: 230}
 ```
 
 `Pigment().rgbString`
@@ -59,6 +80,14 @@ Pigment().hex; // '#EF38E6'
 
 ```javascript
 Pigment().hsl; // [302, 85.1, 57.8]
+```
+
+`Pigment().ihsl`
+
+Returns HSL values as an object with `h`, `s`, `l` properties.
+
+```javascript
+Pigment().ihsl; // {h: 302, s: 85.1, l: 57.8}
 ```
 
 `Pigment().hslString`
@@ -158,16 +187,16 @@ Size [Int] (required)
 const pigment = Pigment();
 pigment.shades(3); // [Pigment(), Pigment(), Pigment()]
 ```
-
----
-
 ### Deploying
 
 1. Bump verion number
+
 ```
 npm version [major|minor|patch]
 ```
+
 2. Build and publish
+
 ```
 npm publish
 ```

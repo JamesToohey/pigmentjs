@@ -1,5 +1,6 @@
 import {formatHex, validateHex} from './validations';
 import {randomHex} from './helpers';
+import {RGB, HSL, RGBString} from './types';
 import {
     hex2rgb,
     rgb2hex,

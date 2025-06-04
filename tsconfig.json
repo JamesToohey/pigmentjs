@@ -1,8 +1,19 @@
 {
     "compilerOptions": {
         "target": "es5",
+        "lib": ["es2015", "dom"],
+        "module": "commonjs",
+        "declaration": true,
+        "outDir": "./dist",
+        "rootDir": "./src",
         "noImplicitAny": true,
         "strict": true,
-        "baseUrl": "src"
-    }
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "sourceMap": true
+    },
+    "include": ["src/**/*"],
+    "exclude": ["test/**/*", "dist/**/*", "lib/**/*", "scripts/**/*"]
 }
