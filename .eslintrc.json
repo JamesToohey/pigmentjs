@@ -1,44 +1,40 @@
 {
-    "env": {
-        "browser": true,
-        "es2022": true,
-        "node": true,
-        "jest": true
-    },
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaVersion": 2022,
-        "sourceType": "module"
-    },
-    "plugins": ["@typescript-eslint"],
-    "rules": {
-        "indent": ["error", 4, {"SwitchCase": 1}],
-        "no-console": "warn",
-        "comma-dangle": ["warn", "always-multiline"],
-        "no-sparse-arrays": "warn",
-        "no-unreachable": "error",
-        "no-unsafe-negation": "error",
-        "getter-return": "error",
-        "no-compare-neg-zero": "error",
-        "no-debugger": "error",
-        "no-trailing-spaces": "error",
-        "no-extra-semi": "warn",
-        "eqeqeq": "error",
-        "curly": "warn",
-        "dot-notation": "error",
-        "no-alert": "error",
-        "no-unused-expressions": "warn",
-        "no-useless-escape": "error",
-        "require-await": "error",
-        "prefer-const": "error",
-        "camelcase": "error",
-        "comma-spacing": "error",
-        "@typescript-eslint/no-unused-vars": "error",
-        "@typescript-eslint/no-explicit-any": "warn"
-    },
-    "ignorePatterns": [
-        "dist/**/*",
-        "test/**/*",
-        "*.js"
-    ]
+  "env": {
+    "browser": true,
+    "es2022": true,
+    "node": true,
+    "jest": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "no-console": "warn",
+    "comma-dangle": ["warn", "always-multiline"],
+    "no-sparse-arrays": "warn",
+    "no-unreachable": "error",
+    "no-unsafe-negation": "error",
+    "getter-return": "error",
+    "no-compare-neg-zero": "error",
+    "no-debugger": "error",
+    "no-trailing-spaces": "error",
+    "no-extra-semi": "warn",
+    "eqeqeq": "error",
+    "curly": "warn",
+    "dot-notation": "error",
+    "no-alert": "error",
+    "no-unused-expressions": "warn",
+    "no-useless-escape": "error",
+    "require-await": "error",
+    "prefer-const": "error",
+    "camelcase": "error",
+    "comma-spacing": "error",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "warn"
+  },
+  "ignorePatterns": ["dist/**/*", "test/**/*", "*.js"]
 }
