@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/JamesToohey/pigmentjs/compare/v1.0.0...v1.0.1) (2025-06-04)
+
+
+### Bug Fixes
+
+* publish using yarn ([#64](https://github.com/JamesToohey/pigmentjs/issues/64)) ([c493bf8](https://github.com/JamesToohey/pigmentjs/commit/c493bf8bef37732ca7672753efec270e6ded8dca))
+
 ## [1.0.0](https://github.com/JamesToohey/pigmentjs/compare/v0.3.3...v1.0.0) (2025-06-04)
 
 
