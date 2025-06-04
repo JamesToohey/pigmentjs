@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/JamesToohey/pigmentjs/compare/v1.0.1...v1.0.2) (2025-06-04)
+
+
+### Bug Fixes
+
+* incorrect publish script ([#66](https://github.com/JamesToohey/pigmentjs/issues/66)) ([1e8e210](https://github.com/JamesToohey/pigmentjs/commit/1e8e21084aa2606fba4732dc4a558c4139f0ba2f))
+
 ## [1.0.1](https://github.com/JamesToohey/pigmentjs/compare/v1.0.0...v1.0.1) (2025-06-04)
 
 
