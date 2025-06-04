@@ -187,16 +187,3 @@ Size [Int] (required)
 const pigment = Pigment();
 pigment.shades(3); // [Pigment(), Pigment(), Pigment()]
 ```
-### Deploying
-
-1. Bump verion number
-
-```
-npm version [major|minor|patch]
-```
-
-2. Build and publish
-
-```
-npm publish
-```

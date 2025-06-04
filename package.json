@@ -18,13 +18,13 @@
       "web": "https://toohey.io"
     }
   ],
-  "homepage": "https://github.com/fundamentalshop/pigmentjs#readme",
+  "homepage": "https://github.com/jamestoohey/pigmentjs#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fundamentalshop/pigmentjs.git"
+    "url": "git+https://github.com/jamestoohey/pigmentjs.git"
   },
   "bugs": {
-    "url": "https://github.com/fundamentalshop/pigmentjs/issues"
+    "url": "https://github.com/jamestoohey/pigmentjs/issues"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
