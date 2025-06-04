@@ -14,10 +14,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: "yarn"
+          cache: "npm"
           registry-url: "https://registry.npmjs.org/"
-      - run: yarn --immutable
-      - run: yarn build
+      - run: npm install
+      - run: npm build
       - run: npm publish --access public --non-interactive
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
