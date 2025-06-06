@@ -123,7 +123,7 @@ export class Pigment {
           r: Math.round(r - r * shade),
           g: Math.round(g - g * shade),
           b: Math.round(b - b * shade),
-        }),
+        })
       );
     });
   }
@@ -143,7 +143,7 @@ export class Pigment {
           r: Math.round(r + (255 - r) * tint),
           g: Math.round(g + (255 - g) * tint),
           b: Math.round(b + (255 - b) * tint),
-        }),
+        })
       );
     });
   }
