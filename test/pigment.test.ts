@@ -403,3 +403,18 @@ describe("Pigment().shades()", () => {
     }
   });
 });
+
+describe("Pigment().tints()", () => {
+  let pigment;
+
+  test("Returns an array of Pigment() instances", () => {
+    for (let i = 0; i < 1000; i += 1) {
+      pigment = Pigment();
+      const tintArray = pigment.tints(5);
+      expect(tintArray.length).toEqual(5);
+      for (const p of tintArray) {
+        expect(p.constructor.name).toEqual("Pigment");
+      }
+    }
+  });
+});

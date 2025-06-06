@@ -128,6 +128,26 @@ export class Pigment {
     });
   }
 
+  tints(size: number): Pigment[] {
+    const tintUnit = 1 / (size + 1);
+    const percentages = [];
+    for (let steps = size; steps > 0; steps -= 1) {
+      percentages.push(steps * tintUnit);
+    }
+    percentages.sort((a, b) => a - b);
+
+    return percentages.map((tint) => {
+      const { r, g, b } = this.irgb;
+      return new Pigment(
+        rgb2hex({
+          r: Math.round(r + (255 - r) * tint),
+          g: Math.round(g + (255 - g) * tint),
+          b: Math.round(b + (255 - b) * tint),
+        })
+      );
+    });
+  }
+
   /**
    * Return either white or black depending on the relative luminance
    * of the primary colour. Can be used to ensure text is legible
