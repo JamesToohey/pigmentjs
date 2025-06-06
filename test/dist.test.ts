@@ -8,5 +8,6 @@ describe("loads", () => {
     pigment.triad();
     pigment.monochrome();
     pigment.shades();
+    pigment.tints();
   });
 });

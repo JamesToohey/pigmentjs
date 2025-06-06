@@ -123,7 +123,27 @@ export class Pigment {
           r: Math.round(r - r * shade),
           g: Math.round(g - g * shade),
           b: Math.round(b - b * shade),
-        })
+        }),
+      );
+    });
+  }
+
+  tints(size: number): Pigment[] {
+    const tintUnit = 1 / (size + 1);
+    const percentages = [];
+    for (let steps = size; steps > 0; steps -= 1) {
+      percentages.push(steps * tintUnit);
+    }
+    percentages.sort((a, b) => a - b);
+
+    return percentages.map((tint) => {
+      const { r, g, b } = this.irgb;
+      return new Pigment(
+        rgb2hex({
+          r: Math.round(r + (255 - r) * tint),
+          g: Math.round(g + (255 - g) * tint),
+          b: Math.round(b + (255 - b) * tint),
+        }),
       );
     });
   }

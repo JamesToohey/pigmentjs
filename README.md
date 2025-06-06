@@ -187,3 +187,20 @@ Size [Int] (required)
 const pigment = Pigment();
 pigment.shades(3); // [Pigment(), Pigment(), Pigment()]
 ```
+
+---
+
+`Pigment().tints(5)`
+
+Returns an array of colours with white mixed progressively.
+
+Params
+
+Size [Int] (required)
+
+- How many new colours to return
+
+```javascript
+const pigment = Pigment();
+pigment.tints(3); // [Pigment(), Pigment(), Pigment()]
+```
