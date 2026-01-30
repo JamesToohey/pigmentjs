@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/JamesToohey/pigmentjs/compare/v1.1.0...v1.1.1) (2026-01-30)
+
+
+### Bug Fixes
+
+* Enable OIDC and bump dependencies ([#70](https://github.com/JamesToohey/pigmentjs/issues/70)) ([38d5f97](https://github.com/JamesToohey/pigmentjs/commit/38d5f97cbd1987d0b8b8d72915f5f4920aa38312))
+
 ## [1.1.0](https://github.com/JamesToohey/pigmentjs/compare/v1.0.2...v1.1.0) (2025-06-06)
 
 
