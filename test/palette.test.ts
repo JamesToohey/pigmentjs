@@ -10,7 +10,7 @@ describe("Palette instantiation", () => {
 
   test("it throws an error when instantiated with invalid value", () => {
     expect(() => Palette("invalid")).toThrow(
-      "Palette must be instantiated with either an instance of Pigment or a hex string"
+      "Palette must be instantiated with either an instance of Pigment or a hex string",
     );
   });
 });

@@ -8,9 +8,9 @@ export class Palette {
     if (!(colour instanceof Pigment)) {
       try {
         colour = new Pigment(colour);
-      } catch (e) {
+      } catch {
         throw new Error(
-          "Palette must be instantiated with either an instance of Pigment or a hex string"
+          "Palette must be instantiated with either an instance of Pigment or a hex string",
         );
       }
     }

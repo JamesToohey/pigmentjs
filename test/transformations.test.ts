@@ -19,7 +19,7 @@ describe("rgb2hex", () => {
 
   test("uses capital letters", () => {
     expect(transformations.rgb2hex({ r: 255, b: 255, g: 255 })).toEqual(
-      "#FFFFFF"
+      "#FFFFFF",
     );
   });
 });
@@ -27,7 +27,7 @@ describe("rgb2hex", () => {
 describe("rgb2string", () => {
   test("converts rgb to string", () => {
     expect(transformations.rgb2string({ r: 100, g: 250, b: 180 })).toEqual(
-      "100, 250, 180"
+      "100, 250, 180",
     );
   });
 });
@@ -119,7 +119,7 @@ describe("hsl2rgb", () => {
 describe("hsl2string", () => {
   test("converts hsl to string", () => {
     expect(transformations.hsl2string({ h: 244.2, s: 67.2, l: 25.1 })).toEqual(
-      "244.2, 67.2, 25.1"
+      "244.2, 67.2, 25.1",
     );
   });
 });
@@ -127,7 +127,7 @@ describe("hsl2string", () => {
 describe("relativeLuminance", () => {
   test("calculate relative luminance", () => {
     expect(
-      transformations.relativeLuminance({ r: 250, g: 112, b: 20 })
+      transformations.relativeLuminance({ r: 250, g: 112, b: 20 }),
     ).toEqual(0.319628412973411);
   });
 });

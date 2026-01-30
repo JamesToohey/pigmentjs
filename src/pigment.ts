@@ -103,7 +103,7 @@ export class Pigment {
     return percentages.map((saturation) => {
       saturation = saturation * 100;
       return new Pigment(
-        rgb2hex(hsl2rgb({ h: this.hue, s: saturation, l: this.lightness }))
+        rgb2hex(hsl2rgb({ h: this.hue, s: saturation, l: this.lightness })),
       );
     });
   }
@@ -123,7 +123,7 @@ export class Pigment {
           r: Math.round(r - r * shade),
           g: Math.round(g - g * shade),
           b: Math.round(b - b * shade),
-        })
+        }),
       );
     });
   }
@@ -143,7 +143,7 @@ export class Pigment {
           r: Math.round(r + (255 - r) * tint),
           g: Math.round(g + (255 - g) * tint),
           b: Math.round(b + (255 - b) * tint),
-        })
+        }),
       );
     });
   }
