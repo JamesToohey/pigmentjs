@@ -18,13 +18,13 @@
       "web": "https://toohey.io"
     }
   ],
-  "homepage": "https://github.com/jamestoohey/pigmentjs#readme",
+  "homepage": "https://github.com/JamesToohey/pigmentjs#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jamestoohey/pigmentjs.git"
+    "url": "git+https://github.com/JamesToohey/pigmentjs.git"
   },
   "bugs": {
-    "url": "https://github.com/jamestoohey/pigmentjs/issues"
+    "url": "https://github.com/JamesToohey/pigmentjs/issues"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -53,9 +53,9 @@
   "devDependencies": {
     "@types/jest": "^29.5.0",
     "@types/node": "^20.0.0",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "eslint": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.54.0",
+    "@typescript-eslint/parser": "^8.54.0",
+    "eslint": "^9.39.2",
     "jest": "^29.5.0",
     "jest-extended": "^4.0.0",
     "prettier": "^3.5.3",
